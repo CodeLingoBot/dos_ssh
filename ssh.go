@@ -10,7 +10,7 @@ import (
 var FrameBufferUpdate chan []byte
 var FrameBufferSubscribers map[string]chan []byte
 
-// Start listening for SSH connections
+// StartSSH starts listening for SSH connections
 func StartSSH() {
 	PEM_KEY := LoadPrivKeyFromFile("./id_rsa")
 	private, err := ssh.ParsePrivateKey(PEM_KEY)
